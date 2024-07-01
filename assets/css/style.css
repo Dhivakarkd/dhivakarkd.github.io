@@ -1,0 +1,89 @@
+/* Compiled CSS from styles.scss */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4a261ff;
+    color: #264653ff;
+}
+
+.hero {
+    background: linear-gradient(0deg, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff);
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.projects {
+    padding: 80px 0;
+}
+
+.about {
+    padding: 80px 0;
+}
+
+.skills {
+    padding: 80px 0;
+}
+
+.contact {
+    padding: 80px 0;
+}
+
+.footer {
+    font-size: 14px;
+    color: #264653ff;
+    background-color: #e9c46aff;
+}
+
+.navbar {
+    padding: 14px 16px;
+    background-color: #264653ff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-left: 12px;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #2a9d8fff;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+    background-color: #e9c46aff;
+    border-color: #2a9d8fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #264653ff;
+}
+
+.card-text {
+    color: #264653ff;
+}
+
+.btn-primary {
+    background-color: #2a9d8fff;
+    border-color: #2a9d8fff;
+}
+
+.btn-primary:hover {
+    background-color: #f4a261ff;
+    border-color: #f4a261ff;
+}
+
+.progress-bar {
+    background-color: #e76f51ff;
+}
