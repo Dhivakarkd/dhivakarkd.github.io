@@ -3,150 +3,622 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Dhivakar R M - Java Backend Developer specializing in Cloud-Native Architecture, AWS, Spring Boot, Kafka, and Microservices">
+    <meta name="keywords" content="Java Developer, Spring Boot, AWS, Kafka, Microservices, Backend Engineer, Cloud Native">
+    <meta name="author" content="Dhivakar R M">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dhivakar R M - Cloud-Native Backend Engineer">
+    <meta property="og:description" content="Java Backend Developer specializing in AWS, Spring Boot, Kafka & Microservices">
+    <meta property="og:url" content="https://dhivakarkd.github.io">
+    
+    <title>Dhivakar R M - Cloud-Native Backend Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="bracket">&lt;</span>
+                <span class="logo-text">dhivakar</span>
+                <span class="bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">about()</a></li>
+                <li><a href="#skills" class="nav-link">skills()</a></li>
+                <li><a href="#projects" class="nav-link">projects()</a></li>
+                <li><a href="#experience" class="nav-link">experience()</a></li>
+                <li><a href="#contact" class="nav-link">contact()</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Your Name</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+    <!-- Canvas Background -->
+    <canvas id="matrix-canvas"></canvas>
 
-<!-- Hero Section -->
-<section id="hero" class="hero">
-    <div class="container text-center">
-        <h1 class="display-4">Passionate Programmer</h1>
-        <p class="lead">Showcasing my projects and skills</p>
-        <p>Java | Spring Boot | Flutter</p>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                    <span class="terminal-title">dhivakar@backend:~</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line">
+                        <span class="prompt">$</span> 
+                        <span class="command">whoami</span>
+                    </p>
+                    <p class="terminal-output">Dhivakar R M</p>
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">$</span> 
+                        <span class="command">cat role.txt</span>
+                    </p>
+                    <p class="terminal-output typing-animation" id="roleText">Cloud-Native Backend Engineer</p>
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">$</span> 
+                        <span class="command">ls skills/</span>
+                    </p>
+                    <p class="terminal-output">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Microservices</span>
+                    </p>
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">$</span> 
+                        <span class="command cursor-blink">_</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="cta-button primary">
+                    <i class="fas fa-code"></i> View Projects
+                </a>
+                <a href="#contact" class="cta-button secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Projects Showcase -->
-<section id="projects" class="projects">
-    <div class="container">
-        <h2 class="text-center mb-4">Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 1</h5>
-                        <p class="card-text">Brief description of Project 1.</p>
-                        <a href="#" class="btn btn-primary">GitHub Repository</a>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="bracket">&lt;</span>about<span class="bracket">/&gt;</span>
+            </h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="gradient-text">From Legacy to Cloud: A Backend Engineer's Evolution</h3>
+                    
+                    <p>
+                        I'm <strong>Dhivakar</strong>, a backend engineer with <strong>5.5 years of experience</strong> 
+                        transitioning from enterprise systems to <strong>cloud-native architectures</strong>.
+                    </p>
+                    
+                    <p>
+                        My journey started with complex data processing and server-side applications, where I mastered 
+                        <strong>Java</strong>, <strong>Oracle databases</strong>, and batch processing systems. Now, I'm 
+                        architecting scalable solutions with <strong>AWS</strong>, building event-driven systems with 
+                        <strong>Kafka</strong>, and containerizing applications with <strong>Docker</strong>.
+                    </p>
+                    
+                    <p>
+                        Currently targeting <strong>Senior Backend Engineer</strong> roles in Bangalore, I'm sharpening 
+                        my DSA skills on <strong>LeetCode</strong> and earning <strong>AWS certifications</strong> to 
+                        command the 20-30 LPA bracket.
+                    </p>
+                    
+                    <p class="highlight-box">
+                        <i class="fas fa-running"></i>
+                        When I'm not coding, you'll find me running half marathons (targeting sub-2:45 at Chennai Rolling Run!) 
+                        or exploring new technologies.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">5.5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">AWS</div>
+                            <div class="stat-label">Certified</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Commitment</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 2</h5>
-                        <p class="card-text">Brief description of Project 2.</p>
-                        <a href="#" class="btn btn-primary">GitHub Repository</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="bracket">&lt;</span>skills<span class="bracket">/&gt;</span>
+            </h2>
+            
+            <div class="skills-grid">
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend & Core</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Spring Boot</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microservices</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">RESTful APIs</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">AWS (S3, EC2, Lambda)</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CI/CD Pipelines</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Messaging -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data & Messaging</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Apache Kafka</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Oracle Database</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Message Queues</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Bash Scripting</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Linux/Unix</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
-                        <p class="card-text">Brief description of Project 3.</p>
-                        <a href="#" class="btn btn-primary">GitHub Repository</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="bracket">&lt;</span>projects<span class="bracket">/&gt;</span>
+            </h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1: AWS S3 Integration -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3 class="project-title">AWS S3 Cloud Integration</h3>
+                    <p class="project-description">
+                        Architected and implemented RESTful APIs using Spring Boot for seamless data transfer to AWS S3 Buckets. 
+                        Built secure file upload/download functionality with proper authentication and error handling.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">AWS S3</span>
+                        <span class="tech-badge">REST API</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure file management</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cloud-native architecture</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Scalable solution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kafka Event Processing -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-stream"></i>
+                    </div>
+                    <h3 class="project-title">Real-Time Event Processing Pipeline</h3>
+                    <p class="project-description">
+                        Developed a robust Kafka Consumer using Spring Boot to establish a real-time event processing system. 
+                        Efficiently processed business events, applied complex business logic, and persisted data with high throughput.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Apache Kafka</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">Event-Driven</span>
+                        <span class="tech-badge">Oracle DB</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time processing</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Event-driven architecture</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>High throughput</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Enterprise Data Validation -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 class="project-title">Enterprise Data Validation System</h3>
+                    <p class="project-description">
+                        Created JSR Batch Jobs dedicated to file validations, ensuring data met required standards and constraints. 
+                        Implemented comprehensive error handling and reporting mechanisms for data quality assurance.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">JSR 352</span>
+                        <span class="tech-badge">Spring Batch</span>
+                        <span class="tech-badge">Data Validation</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Data quality assurance</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Batch processing</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Error reporting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Microservices Architecture -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="project-title">Microservices Architecture Design</h3>
+                    <p class="project-description">
+                        Led the design and implementation of microservices-based architecture for enterprise applications. 
+                        Focused on service decomposition, API gateway patterns, and containerization strategies.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Spring Cloud</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Microservices</span>
+                        <span class="tech-badge">API Gateway</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Service decomposition</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Containerization</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Scalable design</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About Me -->
-<section id="about" class="about">
-    <div class="container">
-        <h2 class="text-center mb-4">About Me</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/profile.jpg" class="img-fluid rounded-circle mb-3" alt="Your Name">
-            </div>
-            <div class="col-md-6">
-                <h3>Your Name</h3>
-                <p>A passionate developer who loves to create meaningful applications.</p>
-                <p>Detail your journey and aspirations as a developer.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="bracket">&lt;</span>experience<span class="bracket">/&gt;</span>
+            </h2>
+            
+            <div class="timeline">
+                <!-- Current Role -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Dec 2023 - Present</div>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <h4 class="timeline-company">Centrico India Private Ltd</h4>
+                        <p class="timeline-description">
+                            Building cloud-native solutions and microservices architectures. Leading backend development 
+                            initiatives with focus on AWS integration and event-driven systems.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Microservices</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Skills Highlight -->
-<section id="skills" class="skills">
-    <div class="container">
-        <h2 class="text-center mb-4">Skills</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Java</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <!-- TCS Team Lead -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2022 - Dec 2023</div>
+                        <h3 class="timeline-title">System Engineer / Team Lead</h3>
+                        <h4 class="timeline-company">Tata Consultancy Services</h4>
+                        <p class="timeline-description">
+                            Led a team of 4 engineers, architected AWS S3 integration solutions, and managed end-to-end 
+                            project delivery. Demonstrated technical leadership and cloud integration expertise.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Team Leadership</span>
+                            <span class="tag">AWS S3</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TCS Associate -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2020 - Oct 2022</div>
+                        <h3 class="timeline-title">Associate System Engineer</h3>
+                        <h4 class="timeline-company">Tata Consultancy Services</h4>
+                        <p class="timeline-description">
+                            Developed real-time event processing systems using Kafka, implemented batch processing solutions, 
+                            and built robust data validation pipelines for enterprise applications.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Apache Kafka</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Batch Processing</span>
+                            <span class="tag">Oracle DB</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <h4>Spring Boot</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="bracket">&lt;</span>contact<span class="bracket">/&gt;</span>
+            </h2>
+            
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3 class="gradient-text">Let's Build Something Amazing Together</h3>
+                    <p>
+                        I'm currently open to <strong>Senior Backend Engineer</strong> opportunities in 
+                        <strong>South Bangalore</strong> (Electronic City / Bommasandra area).
+                    </p>
+                    <p>
+                        Looking for roles focused on <strong>cloud-native development</strong>, 
+                        <strong>microservices architecture</strong>, and <strong>AWS solutions</strong>.
+                    </p>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <h4>Flutter</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                
+                <div class="contact-links">
+                    <a href="mailto:dhivakar084@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Email</h4>
+                            <p>dhivakar084@gmail.com</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/dhivakar-rm" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>LinkedIn</h4>
+                            <p>dhivakar-rm</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/dhivakarkd" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <p>dhivakarkd</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="cta-section">
+                    <a href="mailto:dhivakar084@gmail.com" class="cta-button primary large">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </a>
+                    <a href="https://www.linkedin.com/in/dhivakar-rm" target="_blank" class="cta-button secondary large">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact and Connect -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="text-center mb-4">Contact</h2>
-        <div class="row">
-            <div class="col-md-6 mx-auto text-center">
-                <p>Connect with me through:</p>
-                <a href="mailto:yourname@example.com" class="btn btn-primary mr-2">Email</a>
-                <a href="https://www.linkedin.com/in/yourname" class="btn btn-primary">LinkedIn</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="bracket">&lt;</span>
+                    Built with <i class="fas fa-heart"></i> by Dhivakar R M
+                    <span class="bracket">/&gt;</span>
+                </p>
+                <p class="footer-copyright">© 2026 All rights reserved</p>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer class="footer bg-dark text-center text-white py-4">
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
-</footer>
-
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
