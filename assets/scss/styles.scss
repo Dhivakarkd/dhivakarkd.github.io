@@ -1,0 +1,105 @@
+// Import color variables
+@import 'colors.scss';
+
+// Global styles
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: $sandy-brown; /* Set the background color */
+    color: $charcoal; /* Set text color */
+}
+
+.hero {
+    background: $gradient-top; /* Use gradient top-to-bottom */
+    color: #ffffff; /* White text */
+    padding: 100px 0;
+}
+
+.projects {
+    padding: 80px 0;
+}
+
+.about {
+    padding: 80px 0;
+}
+
+.skills {
+    padding: 80px 0;
+}
+
+.contact {
+    padding: 80px 0;
+}
+
+.footer {
+    font-size: 14px;
+    color: $charcoal; /* Text color for footer */
+    background-color: $saffron; /* Background color for footer */
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 14px 16px;
+    background-color: $charcoal; /* Navbar background color */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff; /* Navbar brand text color */
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-left: 12px;
+    color: #ffffff; /* Navbar link text color */
+}
+
+.nav-link:hover {
+    color: $persian-green; /* Navbar link text color on hover */
+}
+
+/* Card styles */
+.card {
+    transition: transform 0.2s ease-in-out;
+    background-color: $saffron; /* Card background color */
+    border-color: $persian-green; /* Card border color */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.card-title {
+    color: $charcoal; /* Card title color */
+}
+
+.card-text {
+    color: $charcoal; /* Card text color */
+}
+
+.btn-primary {
+    background-color: $persian-green; /* Primary button background color */
+    border-color: $persian-green; /* Primary button border color */
+}
+
+.btn-primary:hover {
+    background-color: $sandy-brown; /* Primary button background color on hover */
+    border-color: $sandy-brown; /* Primary button border color on hover */
+}
+
+/* Skills section styles */
+.progress-bar {
+    background-color: $burnt-sienna; /* Progress bar color */
+}
+
+/* Contact section styles */
+.btn-primary {
+    background-color: $persian-green; /* Contact button background color */
+    border-color: $persian-green; /* Contact button border color */
+}
+
+.btn-primary:hover {
+    background-color: $sandy-brown; /* Contact button background color on hover */
+    border-color: $sandy-brown; /* Contact button border color on hover */
+}

@@ -1,0 +1,31 @@
+// HEX colors
+$charcoal: #264653ff;
+$persian-green: #2a9d8fff;
+$saffron: #e9c46aff;
+$sandy-brown: #f4a261ff;
+$burnt-sienna: #e76f51ff;
+
+// HSL colors
+$charcoal-hsl: hsla(197, 37%, 24%, 1);
+$persian-green-hsl: hsla(173, 58%, 39%, 1);
+$saffron-hsl: hsla(43, 74%, 66%, 1);
+$sandy-brown-hsl: hsla(27, 87%, 67%, 1);
+$burnt-sienna-hsl: hsla(12, 76%, 61%, 1);
+
+// RGBA colors
+$charcoal-rgba: rgba(38, 70, 83, 1);
+$persian-green-rgba: rgba(42, 157, 143, 1);
+$saffron-rgba: rgba(233, 196, 106, 1);
+$sandy-brown-rgba: rgba(244, 162, 97, 1);
+$burnt-sienna-rgba: rgba(231, 111, 81, 1);
+
+// Gradient variations
+$gradient-top: linear-gradient(0deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-right: linear-gradient(90deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-bottom: linear-gradient(180deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-left: linear-gradient(270deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-top-right: linear-gradient(45deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-bottom-right: linear-gradient(135deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-top-left: linear-gradient(225deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-bottom-left: linear-gradient(315deg, $charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
+$gradient-radial: radial-gradient($charcoal, $persian-green, $saffron, $sandy-brown, $burnt-sienna);
